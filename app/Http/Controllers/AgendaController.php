@@ -36,5 +36,9 @@ class AgendaController extends Controller {
         function getNew(){
             return view('agenda.new');
         }
+        
+        function getEdit(){
+            return view('agenda.edit');
+        }
 
 }

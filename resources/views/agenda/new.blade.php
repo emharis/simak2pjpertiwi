@@ -17,6 +17,7 @@
 <section class="content">
 
     <div >
+        <form role="form" action="agenda/new" method="POST">
         <!-- general form elements disabled -->
         <div class="box box-warning">
             <div class="box-header">
@@ -24,7 +25,6 @@
                 <a  class="btn btn-warning pull-right" href="agenda" ><i class="fa fa-angle-double-left"></i> Kembali</a>
             </div><!-- /.box-header -->
             <div class="box-body">
-                <form role="form" action="master/sub/new" method="POST">
                     <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
                     <!-- text input -->
                     <div class="form-group">
@@ -60,24 +60,75 @@
                             </div>
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label>Pinjam Benih</label>
-                        <div class="input-group">
-                            <div class="input-group-addon">
-                                <i class="fa fa-calendar"></i>
+            </div><!-- /.box-body -->
+        </div><!-- /.box -->
+        
+        <div class="box box-primary">
+            <div class="box-header">
+                <h3 class="box-title">Pinjaman Benih</h3>               
+            </div><!-- /.box-header -->
+            <div class="box-body">
+                <div class="form-group has-success">
+                        <div class="row">
+                            <div class="col-xs-4"><label>BENIH BETINA</label></div>
+                            <div class="col-xs-4"><label>Varietas</label></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-4">
+                                <div class="input-group">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-calendar"></i>
+                                    </div>
+                                    <input type="text" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask/>
+                                </div><!-- /.input group -->                        
                             </div>
-                            <input type="text" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask/>
-                        </div><!-- /.input group -->                        
+                            <div class="col-xs-4">
+                                <select class="form-control" name="periode">
+                                    <option>Varietas I</option>
+                                    <option>Varietas II</option>
+                                    <option>Varietas III</option>
+                                </select>
+                            </div>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label>Varietas</label>
-                        <select class="form-control" name="periode">
-                            <option>Varietas I</option>
-                            <option>Varietas II</option>
-                            <option>Varietas III</option>
-                        </select>
+                    <div class="form-group has-success">
+                        <label>Jumlah (kg)</label>
+                        <div class="row"> 
+                            <div class="col-xs-4">
+                                <input type="text" name="jumlahbenih" class="form-control text-right" />
+                            </div>
+                            <div class="col-xs-4">
+                                <input type="text" name="hargabenih" value="@Rp. 3.000" class="form-control text-right" />
+                            </div>
+                            <div class="col-xs-4">
+                                <input type="text" name="total-harga" readonly class="form-control text-right" />
+                            </div>
+                        </div>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group has-warning">
+                        <div class="row">
+                            <div class="col-xs-4"><label>BENIH JANTAN</label></div>
+                            <div class="col-xs-4"><label>Varietas</label></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-4">
+                                <div class="input-group">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-calendar"></i>
+                                    </div>
+                                    <input type="text" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask/>
+                                </div><!-- /.input group -->                        
+                            </div>
+                            <div class="col-xs-4">
+                                <select class="form-control" name="periode">
+                                    <option>Varietas I</option>
+                                    <option>Varietas II</option>
+                                    <option>Varietas III</option>
+                                </select>
+                            </div>
+                        </div>                   
+                    </div>
+                    <div class="form-group has-warning">
                         <label>Jumlah (kg)</label>
                         <div class="row"> 
                             <div class="col-xs-4">
@@ -95,11 +146,10 @@
                     <div class="box-footer">
                         <button type="submit" class="btn btn-primary">Simpan</button>
                     </div>
-
-                </form>
-
-            </div><!-- /.box-body -->
-        </div><!-- /.box -->
+            </div>
+        </div>
+        
+        </form>
     </div>
 
     <div class="modal">
@@ -203,17 +253,18 @@
 
         function showModalPetani() {
             $('.modal').modal();
-        };
-        
-        $('input[name=jumlahbenih]').keyup(function(e){
+        }
+        ;
+
+        $('input[name=jumlahbenih]').keyup(function (e) {
             calculateTotalHarga();
         });
-        $('input[name=hargabenih]').keyup(function(e){
+        $('input[name=hargabenih]').keyup(function (e) {
             calculateTotalHarga();
         });
-        
-        function calculateTotalHarga(){
-            var jumlah=$('input[name=jumlahbenih]').val();
+
+        function calculateTotalHarga() {
+            var jumlah = $('input[name=jumlahbenih]').val();
             var hargasatuan = $('input[name=hargabenih]').val();
             hargasatuan = hargasatuan.replace(/[Rp]/g, "");
             hargasatuan = hargasatuan.replace(/[.]/g, "");

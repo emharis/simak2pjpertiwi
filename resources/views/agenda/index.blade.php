@@ -77,7 +77,7 @@
                         <td>20-04-2015</td>
                         <td>20-05-2015</td>
                         <td>Masa Tanam</td>
-                        <td class="text-center"><a class="btn btn-xs btn-default" href="#"><i class="fa fa-folder-open" ></i></a></td>
+                        <td class="text-center"><a class="btn btn-xs btn-default" href="agenda/edit"><i class="fa fa-folder-open" ></i></a></td>
                     </tr>
                     <tr class="label-primary">
                         <td>2</td>

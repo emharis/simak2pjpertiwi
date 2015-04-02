@@ -180,11 +180,13 @@
                             </div>
 
                             <div class="box-footer">
-                                <button type="submit" class="btn btn-primary">Simpan</button>
+                                <button type="submit" class="btn btn-primary col-sm-12">Simpan</button>
                             </div>
+                            <br/>
                         </div>
                     </div>
                 </div>
+                
 
                 <div class="col-md-6">
                     <div class="box box-primary">

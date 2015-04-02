@@ -37,6 +37,9 @@ Route::post('auth', function() {
 
 Route::controller('home','HomeController');
 Route::controller('agenda','AgendaController');
+Route::controller('pjtanam','PjtanamController');
+Route::controller('pjpupuk','PjpupukController');
+Route::controller('pjpanen','PjpanenController');
 //Route::controller('master/periode','\App\Http\Controllers\Master\PeriodeController');
 
 Route::group(['prefix' => 'master'], function(){

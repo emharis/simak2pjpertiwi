@@ -221,7 +221,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         </li>
                         <li class="{{Request::is('*master*') ? 'active':''}} treeview">
                             <a href="#">
-                                <i class="fa fa-table"></i>
+                                <i class="fa fa-th-large"></i>
                                 <span>Master Data</span>
                             </a>
                             <ul class="treeview-menu">
@@ -241,6 +241,17 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             <a href="agenda">
                                 <i class="fa fa-calendar"></i> <span>Agenda Tanam</span>
                             </a>
+                        </li>
+                        <li class="{{Request::is('*pj*') ? 'active':''}} treeview">
+                            <a href="#">
+                                <i class="fa fa-book"></i>
+                                <span>Pinjaman</span>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li class="{{Request::is('*pjtanam*') ? 'active':''}}" ><a href="pjtanam"><i class="fa fa-circle-o"></i> Pinjam Tanam</a></li>
+                                <li class="{{Request::is('*pjpupuk*') ? 'active':''}}" ><a href="pjpupuk"><i class="fa fa-circle-o"></i> Pinjam Pupuk</a></li>
+                                <li class="{{Request::is('*pjpanen*') ? 'active':''}}" ><a href="pjpanen"><i class="fa fa-circle-o"></i> Pinjam Panen</a></li>
+                            </ul>
                         </li>
                     </ul><!-- /.sidebar-menu -->
                 </section>
@@ -270,12 +281,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <script src="plugins/jQuery/jQuery-2.1.3.min.js"></script>
         <!-- Bootstrap 3.3.2 JS -->
         <script src="js/bootstrap.min.js" type="text/javascript"></script>       
-
-        @yield('scripts')
         
         <!-- AdminLTE App -->
         <script src="js/app.min.js" type="text/javascript"></script>
         <script src="js/clock.js" type="text/javascript"></script>
+
+        @yield('scripts')
 
     </body>
 </html>

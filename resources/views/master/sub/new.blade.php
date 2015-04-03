@@ -12,12 +12,7 @@
     <h1>
         Tambah data sub
     </h1>
-    <ol class="breadcrumb">
-        <li><a href="home"><i class="fa fa-home"></i> Home</a></li>
-        <li class="active">Master Data</li>
-        <li class="active"><a href="master/sub">SUB</a></li>
-        <li class="active">Tambah</li>
-    </ol>
+    <div class="breadcrumb" ><h3 style="margin: 0;padding: 0;" id="clock"></h3></div>
 </section>
 
 <!-- Main content -->
@@ -28,6 +23,7 @@
         <div class="box box-warning">
             <div class="box-header">
                 <h3 class="box-title">Input data baru sub </h3>
+                <a  class="btn btn-warning pull-right" href="master/sub" ><i class="fa fa-angle-double-left"></i> Kembali</a>
             </div><!-- /.box-header -->
             <div class="box-body">
                 <form role="form" action="master/sub/new" method="POST">
@@ -51,7 +47,6 @@
                         <input type="text" class="form-control" placeholder="Area"/>
                     </div>
                     <div class="box-footer">
-                        <a  class="btn btn-warning" href="master/sub" >Kembali</a>
                         <button type="reset" class="btn btn-danger">Reset</button>
                         <button type="submit" class="btn btn-primary">Simpan</button>
                     </div>

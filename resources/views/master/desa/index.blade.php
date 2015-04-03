@@ -12,11 +12,7 @@
     <h1>
         Desa
     </h1>
-    <ol class="breadcrumb">
-        <li><a href="home"><i class="fa fa-home"></i> Home</a></li>
-        <li class="active">Master Data</li>
-        <li class="active">Desa</li>
-    </ol>
+    <div class="breadcrumb" ><h3 style="margin: 0;padding: 0;" id="clock"></h3></div>
 </section>
 
 <!-- Main content -->

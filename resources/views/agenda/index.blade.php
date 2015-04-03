@@ -12,10 +12,7 @@
     <h1>
         Agenda Tanam
     </h1>
-    <ol class="breadcrumb">
-        <li><a href="home"><i class="fa fa-home"></i> Home</a></li>
-        <li class="active">Agenda Tanam</li>
-    </ol>
+    <div class="breadcrumb" ><h3 style="margin: 0;padding: 0;" id="clock"></h3></div>
 </section>
 
 <!-- Main content -->
@@ -24,59 +21,191 @@
     <div class="box">
         <div class="box-header">
             <h3 class="box-title">Tabel data agenda tanam</h3>
-            <a href="master/periode/new" class="pull-right btn btn-success"><i class="fa fa-plus"></i> &nbsp;&nbsp;Tambah</a>
+            <a href="agenda/new" class="pull-right btn btn-success"><i class="fa fa-plus"></i> &nbsp;&nbsp;Tambah</a>
         </div><!-- /.box-header -->
         <div class="box-body">
-            <table id="example1" class="table table-bordered table-striped">
-                <thead>
-                    <tr>
-                        <th>No</th>
-                        <th>Kode</th>
-                        <th>Nama</th>
-                        <th>Tahun</th>
-                        <th ></th>
-                    </tr>
-                </thead>
+            <table class="table table-bordered">
                 <tbody>
                     <tr>
-                        <td>1</td>
-                        <td>P15-I</td>
-                        <td>Periode Tanam ke-1 tahun 2015</td>
-                        <td>2015</td>
-                        <td class="text-center">
-                            <a class="btn btn-xs btn-primary" href="master/periode/edit/1"><i class="fa fa-edit"></i></a>
-                            <a class="btn btn-xs btn-danger"><i class="fa fa-trash-o"></i></a>
+                        <td>Periode Tanam</td>
+                        <td>
+                            <select name="periode" class="form-control">
+                                <option>Periode I tahun 2015</option>
+                                <option>Periode II tahun 2015</option>
+                                <option>Periode IIII tahun 2015</option>
+                            </select>
                         </td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>P15-II</td>
-                        <td>Periode Tanam ke-2 tahun 2015</td>
-                        <td>2015</td>
-                        <td class="text-center">
-                            <a class="btn btn-xs btn-primary"><i class="fa fa-edit"></i></a>
-                            <a class="btn btn-xs btn-danger"><i class="fa fa-trash-o"></i></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>P15-III</td>
-                        <td>Periode Tanam ke-3 tahun 2015</td>
-                        <td>2015</td>
-                        <td class="text-center">
-                            <a class="btn btn-xs btn-primary"><i class="fa fa-edit"></i></a>
-                            <a class="btn btn-xs btn-danger"><i class="fa fa-trash-o"></i></a>
+                        <td>
+                            <a class="btn btn-primary">Tampilkan</a>
                         </td>
                     </tr>
                 </tbody>
-                <tfoot>
-                    <tr>
-                        <th>No</th>
-                        <th>Kode</th>
-                        <th>Tahun</th>
-                        <th></th>
+            </table>
+            <br/>
+            <table  class="table table-bordered table-striped table-responsive">
+                <thead class="label-default">
+                    <tr >
+                        <th rowspan="2" class="text-center">No</th>
+                        <th rowspan="2" class="text-center">Petani</th>
+                        <th colspan="2" class="text-center">Pinjam Benih</th>
+                        <th colspan="2" class="text-center">Tanam Benih</th>
+                        <th colspan="4" class="text-center" >Estimasi Waktu</th>
+                        <th rowspan="2" class="text-center">Status</th>
+                        <th rowspan="2" class="text-center"></th>
                     </tr>
-                </tfoot>
+                    <tr>
+                        <th class="text-center">Betina</th>
+                        <th class="text-center">Jantan</th>
+                        <th class="text-center">Betina</th>
+                        <th class="text-center">Jantan</th>
+                        <th class="text-center">Tanam</th>
+                        <th class="text-center"> Cabut Bunga</th>
+                        <th class="text-center">Babat Jantan</th>
+                        <th class="text-center">Panen</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="label-primary">
+                        <td>1</td>
+                        <td>Toni</td>
+                        <td>01-01-2015</td>
+                        <td>05-01-2015</td>
+                        <td>01-01-2015</td>
+                        <td>05-01-2015</td>                        
+                        <td>20-02-2015</td>
+                        <td>20-03-2015</td>
+                        <td>20-04-2015</td>
+                        <td>20-05-2015</td>
+                        <td>Masa Tanam</td>
+                        <td class="text-center"><a class="btn btn-xs btn-default" href="#"><i class="fa fa-folder-open" ></i></a></td>
+                    </tr>
+                    <tr class="label-primary">
+                        <td>2</td>
+                        <td>Budi</td>
+                        <td>01-01-2015</td>
+                        <td>05-01-2015</td>
+                        <td>01-01-2015</td>
+                        <td>05-01-2015</td>                        
+                        <td>20-02-2015</td>
+                        <td>20-03-2015</td>
+                        <td>20-04-2015</td>
+                        <td>20-05-2015</td>
+                        <td>Masa Tanam</td>
+                        <td class="text-center"><a class="btn btn-xs btn-default" href="#"><i class="fa fa-folder-open" ></i></a></td>
+                    </tr>
+                    <tr class="label-primary">
+                        <td>3</td>
+                        <td>Rachmat</td>
+                        <td>01-01-2015</td>
+                        <td>05-01-2015</td>
+                        <td>05-01-2015</td>                        
+                        <td>20-02-2015</td>
+                        <td>20-02-2015</td>
+                        <td>20-03-2015</td>
+                        <td>20-04-2015</td>
+                        <td>20-05-2015</td>
+                        <td>Masa Tanam</td>
+                        <td class="text-center"><a class="btn btn-xs btn-default" href="#"><i class="fa fa-folder-open" ></i></a></td>
+                    </tr>
+                    <tr class="label-success">
+                        <td>4</td>
+                        <td>Rijal</td>
+                        <td>01-01-2015</td>
+                        <td>05-01-2015</td>                        
+                        <td>20-02-2015</td>
+                        <td>05-01-2015</td>                        
+                        <td>20-02-2015</td>
+                        <td>20-03-2015</td>
+                        <td>20-04-2015</td>
+                        <td>20-05-2015</td>
+                        <td>Cabut Kembang</td>
+                        <td class="text-center"><a class="btn btn-xs btn-default" href="#"><i class="fa fa-folder-open" ></i></a></td>
+                    </tr>
+                    <tr class="label-success">
+                        <td>5</td>
+                        <td>Rafid</td>
+                        <td>01-01-2015</td>
+                        <td>05-01-2015</td>                        
+                        <td>20-02-2015</td>
+                        <td>05-01-2015</td>                        
+                        <td>20-02-2015</td>
+                        <td>20-03-2015</td>
+                        <td>20-04-2015</td>
+                        <td>20-05-2015</td>
+                        <td>Cabut Kembang</td>
+                        <td class="text-center"><a class="btn btn-xs btn-default" href="#"><i class="fa fa-folder-open" ></i></a></td>
+                    </tr>
+                    <tr class="label-waring">
+                        <td>6</td>
+                        <td>Supardi</td>
+                        <td>01-01-2015</td>
+                        <td>05-01-2015</td>                        
+                        <td>20-02-2015</td>
+                        <td>05-01-2015</td>                        
+                        <td>20-02-2015</td>
+                        <td>20-03-2015</td>
+                        <td>20-04-2015</td>
+                        <td>20-05-2015</td>
+                        <td>Babat Jantan</td>
+                        <td class="text-center"><a class="btn btn-xs btn-default" href="#"><i class="fa fa-folder-open" ></i></a></td>
+                    </tr>
+                    <tr class="label-waring">
+                        <td>7</td>
+                        <td>Robi</td>
+                        <td>01-01-2015</td>
+                        <td>05-01-2015</td>                        
+                        <td>20-02-2015</td>
+                        <td>05-01-2015</td>                        
+                        <td>20-02-2015</td>
+                        <td>20-03-2015</td>
+                        <td>20-04-2015</td>
+                        <td>20-05-2015</td>
+                        <td>Babat Jantan</td>
+                        <td class="text-center"><a class="btn btn-xs btn-default" href="#"><i class="fa fa-folder-open" ></i></a></td>
+                    </tr>
+                    <tr class="label-waring">
+                        <td>8</td>
+                        <td>Rojali</td>
+                        <td>01-01-2015</td>
+                        <td>05-01-2015</td>                        
+                        <td>20-02-2015</td>
+                        <td>05-01-2015</td>                        
+                        <td>20-02-2015</td>
+                        <td>20-03-2015</td>
+                        <td>20-04-2015</td>
+                        <td>20-05-2015</td>
+                        <td>Babat Jantan</td>
+                        <td class="text-center"><a class="btn btn-xs btn-default" href="#"><i class="fa fa-folder-open" ></i></a></td>
+                    </tr>
+                    <tr class="label-danger">
+                        <td>9</td>
+                        <td>Adiono</td>
+                        <td>01-01-2015</td>
+                        <td>05-01-2015</td>                        
+                        <td>20-02-2015</td>
+                        <td>05-01-2015</td>                        
+                        <td>20-02-2015</td>
+                        <td>20-03-2015</td>
+                        <td>20-04-2015</td>
+                        <td>20-05-2015</td>
+                        <td>Masa Panen</td>
+                        <td class="text-center"><a class="btn btn-xs btn-default" href="#"><i class="fa fa-folder-open" ></i></a></td>
+                    </tr>
+                    <tr class="label-danger">
+                        <td>10</td>
+                        <td>Lukito</td>
+                        <td>01-01-2015</td>
+                        <td>05-01-2015</td>                        
+                        <td>20-02-2015</td>
+                        <td>05-01-2015</td>                        
+                        <td>20-02-2015</td>
+                        <td>20-03-2015</td>
+                        <td>20-04-2015</td>
+                        <td>20-05-2015</td>
+                        <td>Masa Panen</td>
+                        <td class="text-center"><a class="btn btn-xs btn-default" href="#"><i class="fa fa-folder-open" ></i></a></td>
+                    </tr>
+                </tbody>
             </table>
         </div><!-- /.box-body -->
     </div><!-- /.box -->
@@ -92,15 +221,7 @@
 
 <script type="text/javascript">
     $(function () {
-        $("#example1").dataTable();
-        $('#example2').dataTable({
-            "bPaginate": true,
-            "bLengthChange": false,
-            "bFilter": false,
-            "bSort": true,
-            "bInfo": true,
-            "bAutoWidth": false
-        });
+        
     });
 </script>
 @stop

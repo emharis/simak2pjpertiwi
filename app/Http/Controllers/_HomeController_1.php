@@ -1,10 +1,10 @@
 <?php namespace App\Http\Controllers;
 
-class AgendaController extends Controller {
+class HomeController extends Controller {
 
 	/*
 	|--------------------------------------------------------------------------
-	| Agenda Controller
+	| Home Controller
 	|--------------------------------------------------------------------------
 	|
 	| This controller renders your application's "dashboard" for users that
@@ -20,7 +20,7 @@ class AgendaController extends Controller {
 	 */
 	public function __construct()
 	{
-		
+		$this->middleware('auth');
 	}
 
 	/**
@@ -28,13 +28,9 @@ class AgendaController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function getIndex()
+	public function index()
 	{
-		return view('agenda.index');
+		return view('home');
 	}
-        
-        function getNew(){
-            return view('agenda.new');
-        }
 
 }
